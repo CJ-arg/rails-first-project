@@ -11,8 +11,7 @@ end
      assert_select 'li', Article.count
    end
 test "should get show" do
-      # get article_url(@article)
-      get "/articles/#{@article.id}"
+       get article_url(@article)
       assert_response :success
       assert_select 'h1', @article.title
       assert_select 'p', @article.body
